@@ -122,7 +122,7 @@ VALUES
 ('Romance');
 
 #### 4.4 Inserindo dados na tabela 'livro'
-''''SQL
+'''SQL
 INSERT INTO livro(titulo, ano_publicacao, editora, autor, assunto)
 VALUES
 ('Capitães da Areia',1937,1,1,4),
