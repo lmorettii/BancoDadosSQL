@@ -96,7 +96,7 @@ DROP TABLE extra
 agora que as tabelas estão prontas, vamos inserir dados nelas.
 
 #### Passo 4.1 Inserindo dados na tabela 'editora'
-SQL
+''''SQL
 INSERT INTO editora(nome_editora, pais)
 VALUES
 ('editora alfa', 'brasil'),
@@ -105,7 +105,7 @@ VALUES
 
 
 #### 4.2 Inserindo dados na tabela 'autor'
-'''SQL
+''''SQL
 INSERT INTO autor(nome_autor, data_nascimento, email)
 VALUES 
 ('Jorge Amado','1912-08-10','jorginhoamado@email.com'),
@@ -120,3 +120,13 @@ VALUES
 ('Mistério'),
 ('Terror'),
 ('Romance');
+
+#### 4.4 Inserindo dados na tabela 'livro'
+''''SQL
+INSERT INTO livro(titulo, ano_publicacao, editora, autor, assunto)
+VALUES
+('Capitães da Areia',1937,1,1,4),
+('Dom Casmurro',1899,2,2,4),
+('A Biblioteca da Meia-Noite',2020,3,3,2),
+('Memórias Póstumas de Brás Cubas',1881,1,2,4);
+
