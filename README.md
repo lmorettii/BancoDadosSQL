@@ -15,14 +15,14 @@ Este guia sera dividido em etapas para demonstrar desde a criação de tabelas, 
 #### 1.1 Criando o DB
 
 ...
-
+```sql
 CREATE DATABASE biblioteca;
 USE biblioteca;
 
 #### 1.2 Criando tabela 'Editora'
 
 ...
-
+```sql
 CREATE TABLE editora (
     id_editora INT PRIMARY KEY AUTO_INCREMENT,
     nome_editora VARCHAR(100) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE editora (
 
 #### 1.3 Criando a tabela 'autor'
 ...
-
+```sql
 CREATE TABLE autor(
     id_autor INT PRIMARY KEY AUTO_INCREMENT,
     nome_autor VARCHAR(200),
@@ -41,7 +41,7 @@ CREATE TABLE autor(
 
 #### 1.4 Criando a tabela 'assunto'
 ...
-
+```sql
 CREATE TABLE assunto (
     id_assunto INT PRIMARY KEY AUTO_INCREMENT,
     descricao_assunto VARCHAR(300) NOT NULL
@@ -49,7 +49,7 @@ CREATE TABLE assunto (
 
 #### 1.5 Criando a tabela 'livro'
 ...
-
+```sql
 CREATE TABLE livro(
     id_livro INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(150) NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE livro(
 A tabela EXTRA vai servir para exemplificar a exclusão
 
 ...
-
+```sql
 CREATE TABLE extra(
     id INT PRIMARY KEY AUTO_INCREMENT,
     produtos VARCHAR(50),
@@ -80,7 +80,7 @@ CREATE TABLE extra(
 ## Passo 2: editar tabelas usando 'ALTER'
 Apos a criação da tabela, podemos adcionar novos campos. Vamos adcionar uma coluna 'email' na tabela 'autor'
 
-''''SQL
+```sql
 ALTER TABLE autor
 ADD COLUMN email VARCHAR(100);
 ...
@@ -89,6 +89,7 @@ ADD COLUMN email VARCHAR(100);
 Se precisar de uma tabela usamos o comando drop
 
 ...
+```sql
 DROP TABLE extra
 ...
 
@@ -96,7 +97,7 @@ DROP TABLE extra
 agora que as tabelas estão prontas, vamos inserir dados nelas.
 
 #### Passo 4.1 Inserindo dados na tabela 'editora'
-''''SQL
+```sql
 INSERT INTO editora(nome_editora, pais)
 VALUES
 ('editora alfa', 'brasil'),
@@ -105,7 +106,7 @@ VALUES
 
 
 #### 4.2 Inserindo dados na tabela 'autor'
-''''SQL
+```sql
 INSERT INTO autor(nome_autor, data_nascimento, email)
 VALUES 
 ('Jorge Amado','1912-08-10','jorginhoamado@email.com'),
@@ -113,7 +114,7 @@ VALUES
 ('Matt Haig','1975-06-03','matt@email.com');
 '''
 #### 4.3 Inserindo dados na tabela 'assunto'
-''''SQL
+```sql
 INSERT INTO assunto (descricao_assunto)
 VALUES
 ('Ficção'),
@@ -122,7 +123,8 @@ VALUES
 ('Romance');
 
 #### 4.4 Inserindo dados na tabela 'livro'
-'''SQL
+
+```sql
 INSERT INTO livro(titulo, ano_publicacao, editora, autor, assunto)
 VALUES
 ('Capitães da Areia',1937,1,1,4),
